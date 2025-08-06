@@ -1,0 +1,27 @@
+<app-card>
+  <button [class.active]="selectedUser" (click)="onSelectUser()">
+    <!-- Binding Type: Property Binding -->
+    <!-- <img [src]="'assets/users' + selectedUser" [alt]="selectedUser.name"> -->
+
+    <!-- Property Binding using signals -->
+    <!-- <img [src]="imagePath()" [alt]="selectedUser().name"> -->
+
+    <!-- Property Binding using decorator inputs -->
+    <img [src]="imagePath" [alt]="user.name" />
+
+    <!-- Property Binding using signal inputs -->
+    <!-- <img [src]="imagePath()" [alt]="name()"> -->
+
+    <!-- Binding Type: String Interpolation -->
+    <!-- <span>{{ selectedUser.name }}</span>  -->
+
+    <!-- String Interpolation using signals -->
+    <!-- <span>{{ selectedUser().name }}</span> -->
+
+    <!-- String Interpolation decorator inputs -->
+    <span>{{ user.name }}</span>
+
+    <!-- String Interpolation using signal inputs -->
+    <!-- <span>{{ name() }}</span>  -->
+  </button>
+</app-card>
